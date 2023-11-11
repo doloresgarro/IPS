@@ -1,6 +1,6 @@
 
 % Función que implementa el sistema del Ejercicio 2 en una ecuación en diferencias
-function y = filtroDePrueba1rama(x)
+function y = filtro2ramas(x)
 
     N = length(x);  % Obtener la longitud de la señal de entrada
     
@@ -14,10 +14,9 @@ function y = filtroDePrueba1rama(x)
         else
             if ((n > 8820) && (n <= 17640))
                 y(n) = x(n) + 0.45 * x(n - 8820);
-            %else
-             %   y(n) = x(n) + 0.45 * x(n - 8820) - 0.2025 * x(n - 17640);
-            %end;
-
+            else
+                y(n) = x(n) + 0.45 * x(n - 8820) - 0.2025 * x(n - 17640);
+            end
         end
     end
 end

@@ -11,12 +11,12 @@ xlabel("n");
 ylabel("hA[n]");
 title("Señal sin filtro");
 
-y2 = filtro2ramas(yA);
+y2 = filtro1rama(yA);
 subplot(2, 1, 2);
 stem(n,y2);
 xlabel("n");
 ylabel("yA[n]");
 title("Señal con filtro");
 
-r2 = filtro2ramas(x);
+r2 = filtro1rama(x);
 sound(r2, fs);
